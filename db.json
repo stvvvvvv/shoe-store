@@ -1,0 +1,52 @@
+{
+    "products": [
+      {
+        "image": "1.jpg",
+        "name": "Nike ZoomX Vaporfly Next% 2 OG",
+        "price": 20999,
+        "article": "1",
+        "available": true,
+        "category": "Running shoes"
+      },
+      {
+        "image": "2.jpg",
+        "name": "Nike Cosmic Unity",
+        "price": 13499,
+        "article": "2",
+        "available": true,
+        "category": "Basketball shoes"
+      },
+      {
+        "image": "3.jpg",
+        "name": "Nike Air Zoom Pegasus 38 Limited Edition",
+        "price": 9999,
+        "article": "3",
+        "available": false,
+        "category": "Running shoes"
+      },
+      {
+        "image": "4.jpg",
+        "name": "Nike Mercurial Superfly 8 Academy CR7 MG",
+        "price": 8199,
+        "article": "4",
+        "available": true,
+        "category": "Soccer sneakers"
+      },
+      {
+        "image": "5.jpg",
+        "name": "Nike Phantom GT Elite FG",
+        "price": 17999,
+        "article": "5",
+        "available": false,
+        "category": "Soccer sneakers"
+      },
+      {
+        "image": "6.jpeg",
+        "name": "T-shirt 6",
+        "price": 14499 ,
+        "article": "6",
+        "available": true,
+        "category": "Basketball shoes"
+      }
+    ]
+  }
