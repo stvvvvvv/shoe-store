@@ -1,10 +1,16 @@
 <template>
     <div class="cart">
+      <Cart-Item/>
     </div>
 </template>
 <script>
+import CartItem from './CartItem.vue'
+
 export default {
-  name: 'Cart'
+  name: 'Cart',
+  components: {
+    CartItem
+  }
 }
 </script>
 
