@@ -1,15 +1,21 @@
 <template>
     <nav class="nav">
-        <Cart/>
+        <Cart :cartData="CART"/>
     </nav>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 import Cart from './Cart.vue'
 
 export default {
   name: 'Header',
   components: {
     Cart
+  },
+  computed: {
+    ...mapGetters([
+      'CART'
+    ])
   }
 }
 </script>

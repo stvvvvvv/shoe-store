@@ -14,7 +14,10 @@
           <p class="product-card__type">{{ productData.category }}</p>
           <p class="product-card__price">{{ productData.price }} ₽</p>
           <div class="product-card__btn_container">
-            <button class="product-card__btn">Add to cart</button>
+            <button
+            class="product-card__btn"
+            @click="addToCart"
+            >Add to cart</button>
           </div>
         </div>
       </div>
@@ -32,7 +35,11 @@ export default {
       }
     }
   },
-  methods: { }
+  methods: {
+    addToCart (cartLenght) {
+      this.$emit('addToCart', this.productData)
+    }
+  }
 }
 </script>
 
