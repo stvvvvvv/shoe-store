@@ -5,7 +5,7 @@
         <Product-card
           v-for="product in PRODUCTS"
           :key="product.arcticle"
-          :product_data="product"
+          :productData="product"
         />
       </div>
     </div>

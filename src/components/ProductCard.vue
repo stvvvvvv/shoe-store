@@ -7,12 +7,12 @@
       </div>
       <div class="product-card__overlay">
         <div class="product-card__img_container">
-          <img class="product-card__img" src="../assets/images/1.png" alt="Sneakers"/>
+          <img class="product-card__img" :src=" require('../assets/images/' + productData.image) " alt="Sneakers"/>
         </div>
         <div class="product-card__information">
-          <h3 class="product-card__name">{{ product_data.name }}</h3>
-          <p class="product-card__type">{{ product_data.category }}</p>
-          <p class="product-card__price">{{ product_data.price }} ₽</p>
+          <h3 class="product-card__name">{{ productData.name }}</h3>
+          <p class="product-card__type">{{ productData.category }}</p>
+          <p class="product-card__price">{{ productData.price }} ₽</p>
           <div class="product-card__btn_container">
             <button class="product-card__btn">Add to cart</button>
           </div>
@@ -25,13 +25,14 @@
 export default {
   name: 'ProductCard',
   props: {
-    product_data: {
+    productData: {
       type: Object,
       default () {
         return {}
       }
     }
-  }
+  },
+  methods: { }
 }
 </script>
 
