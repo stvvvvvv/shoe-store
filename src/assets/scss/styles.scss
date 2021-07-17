@@ -9,10 +9,12 @@ body{
 
 .wrapper{
     max-width: 1170px;
+    margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 16px;
     padding-right: 16px;
+    
 }
 
 .title{
@@ -86,5 +88,44 @@ body{
          display: flex;
          flex-wrap: wrap;
          justify-content: space-around;
+     }
+ }
+
+ .nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    z-index: 100;
+ }
+
+ .cart{
+     padding: 1rem;
+     margin-bottom: 1rem;
+     width: 60px;
+     
+     &__img{
+         &_container{
+            &:hover{
+                cursor: pointer;
+            }
+         }
+     }
+     &__counter{
+         position: relative;
+         top: 2px;
+         left: 4px;
+         color: #fff;
+         font-size: 1.4rem;
+        &_container{
+        position: absolute;
+        min-width: 30px;
+        min-height: 30px;
+        margin-top: -18px;
+        margin-left: 32px;
+        background-color: rgb(117, 117, 117);
+        border-radius: 50%;
+        }
      }
  }

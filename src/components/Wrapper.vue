@@ -1,19 +1,19 @@
 <template>
 <main class="wrapper">
-  <Cart/>
+  <Header/>
   <Catalog/>
 </main>
 </template>
 
 <script>
 import Catalog from '@/components/Catalog'
-import Cart from '@/components/Cart'
+import Header from '@/components/Header'
 
 export default {
   name: 'Wrapper',
   components: {
     Catalog,
-    Cart
+    Header
   }
 }
 </script>

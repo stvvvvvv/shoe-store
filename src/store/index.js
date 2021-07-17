@@ -3,7 +3,8 @@ import axios from 'axios'
 
 export default createStore({
   state: {
-    products: []
+    products: [],
+    cart: []
   },
   mutations: {
     SET_PRODUCTS_TO_STATE: (state, products) => {
@@ -28,6 +29,9 @@ export default createStore({
   getters: {
     PRODUCTS (state) {
       return state.products
+    },
+    CART (state) {
+      return state.cart
     }
   },
   modules: {
