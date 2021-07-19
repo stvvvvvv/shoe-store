@@ -1,6 +1,7 @@
 <template>
     <div class="catalog">
       <h1 class="title">Catalog</h1>
+      <Loader v-if="loading"/>
       <div class="catalog__container">
         <Product-card
           v-for="product in PRODUCTS"
@@ -13,13 +14,19 @@
 </template>
 
 <script>
+import Loader from '@/components/Loader'
 import ProductCard from '@/components/ProductCard'
 import { mapActions, mapGetters } from 'vuex'
 
 export default {
   name: 'Catalog',
+  data () {
+    return {
+      loading: true
+    }
+  },
   components: {
-    ProductCard
+    ProductCard, Loader
   },
   methods: {
     ...mapActions([
@@ -29,6 +36,8 @@ export default {
     addToCart (data) {
       this.ADD_TO_CART(data)
       console.log(data)
+    },
+    ProductCardCounter () {
     }
   },
   computed: {
@@ -38,6 +47,9 @@ export default {
   },
   mounted () {
     this.GET_PRODUCTS_FROM_API()
+    setTimeout(() => {
+      this.loading = false
+    }, 1000)
   }
 }
 </script>
