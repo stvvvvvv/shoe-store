@@ -104,13 +104,11 @@ body{
      padding: 1rem;
      margin-bottom: 1rem;
      width: 100%;
-     
+     height: 72px;
+     max-height: 72px;
      &__img{
         cursor: pointer;
          &_container{
-            &:hover{
-                cursor: pointer;
-            }
          }
      }
      &__counter{
@@ -141,18 +139,38 @@ body{
  }
 
  .cart-item{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     width: 100vw;
      position: relative;
-     left: 0;
-     top: 0;
-     background-color: #111;
+     left: -1rem;
+     padding: 2rem 0;
+     border-bottom: 2px solid rgb(117, 117, 117);
+     color: #fff;
+     &__wrapper{
+         position: relative;
+         left: -1rem;
+         width: 100vw;
+         max-height: 99vh;
+         background-color: #111;
+         overflow: scroll;
+         overflow-x:hidden;
+     }
+     &__container{
+         display: flex;
+         align-items: center;
+         padding: 0 20%;
+     }
      &__img{
         &_container{
-            max-width: 100px;
+            max-width: 150px;
             height: auto;
+            margin-left: 1rem;
         }
      }
      &__information{
-        
+        margin-left: 1rem;
      }
      &__name{
        
@@ -167,6 +185,32 @@ body{
         
      }
      &__btn_container{
-
+        margin-right: 3%;
      }
  }
+
+ .close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+  }
+  .close:hover {
+    opacity: 0.3;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: rgb(117, 117, 117);
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }

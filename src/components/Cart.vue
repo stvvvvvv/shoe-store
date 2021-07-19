@@ -7,11 +7,13 @@
          v-if="cartLenght > 0"
          ><span class="cart__counter">{{ CartLenght }}</span></div>
       </div>
-      <Cart-Item
+      <div class="cart-item__wrapper">
+        <Cart-Item
         v-for="item in cartData"
         :key="item.article"
         :cartItemData="item"
-      />
+        />
+      </div>
     </div>
 </template>
 <script>
