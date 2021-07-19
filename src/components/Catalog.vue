@@ -46,8 +46,8 @@ export default {
     ])
   },
   mounted () {
-    this.GET_PRODUCTS_FROM_API()
     setTimeout(() => {
+      this.GET_PRODUCTS_FROM_API()
       this.loading = false
     }, 1000)
   }

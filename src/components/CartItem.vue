@@ -8,11 +8,10 @@
         <h3 class="cart-item__name">{{ cartItemData.name }}</h3>
         <p class="cart-item__id">{{ cartItemData.article }}</p>
         <p class="cart-item__price">{{ cartItemData.price }} ₽</p>
-        <p class="cart-item__counter"></p>
       </div>
       </div>
       <div class="cart-item__btn_container">
-        <a href="" class="close"></a>
+        <a href="#" class="close" @click="delFromCart"></a>
       </div>
     </div>
 </template>
@@ -26,6 +25,11 @@ export default {
       default () {
         return {}
       }
+    }
+  },
+  methods: {
+    delFromCart () {
+      this.$emit('delFromCart')
     }
   }
 }

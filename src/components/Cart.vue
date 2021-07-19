@@ -9,9 +9,10 @@
       </div>
       <div class="cart-item__wrapper">
         <Cart-Item
-        v-for="item in cartData"
+        v-for="(item, index) in cartData"
         :key="item.article"
         :cartItemData="item"
+        @delFromCart="delFromCart(index)"
         />
       </div>
     </div>
@@ -37,7 +38,11 @@ export default {
   components: {
     CartItem
   },
-  methods: { }
+  methods: {
+    delFromCart (index) {
+      console.log(index)
+    }
+  }
 }
 </script>
 
