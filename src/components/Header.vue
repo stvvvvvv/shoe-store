@@ -1,6 +1,8 @@
 <template>
     <nav class="nav">
-        <Cart :cartData="CART"/>
+        <Cart
+        :cartData="CART"
+        />
     </nav>
 </template>
 <script>
@@ -9,6 +11,10 @@ import Cart from './Cart.vue'
 
 export default {
   name: 'Header',
+  data () {
+    return {
+    }
+  },
   components: {
     Cart
   },
