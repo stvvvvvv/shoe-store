@@ -26,26 +26,33 @@
           <a href="#">Click here!</a>
         </h2>
         <div
-        class="cart-item__info"
+        class="cart__info"
         v-else
         >
-          <h1>Total</h1>
-          <h2>Sub-total: </h2>
+          <h2>Total: 99999₽</h2>
           <div class="delivery__container">
             <h2 class="delivery__title">
               Delivery
             </h2>
             <div class="delivery__select-container">
-              <select name="deliverySelect" id="deliverySelect">
+              <select name="deliverySelect" id="deliverySelect" class="delivery__select">
                 <option value="0">Standard delivery</option>
                 <option value="1">Express delivery</option>
                 <option value="2">Delivery to the pickup point</option>
             </select>
+            <p><a href="#">Сlick here</a> to learn more</p>
             </div>
           </div>
-          <button class="cart-item__pay-btn">
-            Pay
-          </button>
+          <div class="coupon__container">
+            <h2>Coupon</h2>
+            <input type="text" id="couponInput" class="coupon__input">
+            <p>Got a discount code?</p>
+          </div>
+          <div class="pay-btn__container">
+            <button
+            class="pay-btn"
+            >Pay</button>
+          </div>
         </div>
         <Cart-Item
         v-for="(item, index) in cartData"
@@ -63,8 +70,7 @@ export default {
   name: 'Cart',
   data () {
     return {
-      showCartItems: false,
-      noScroll: false
+      showCartItems: false
     }
   },
   props: {
