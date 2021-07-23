@@ -1,7 +1,7 @@
 <template>
   <Header/>
   <main class="wrapper">
-    <Catalog/>
+    <catalog/>
   </main>
   <Footer/>
 </template>

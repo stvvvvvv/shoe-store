@@ -54,7 +54,7 @@
             >Pay</button>
           </div>
         </div>
-        <Cart-Item
+        <cart-item
         v-for="(item, index) in cartData"
         :key="item.article"
         :cartItemData="item"

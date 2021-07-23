@@ -97,6 +97,8 @@ body{
 
  .nav{
     position: fixed;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     top: 0;
     left: 0;
@@ -111,13 +113,12 @@ body{
  .cart{
      padding: 1rem;
      margin-bottom: 1rem;
-     width: 100%;
+     z-index: 1000;
+     width: 100px;
      height: 72px;
      max-height: 72px;
      &__img{
         cursor: pointer;
-         &_container{
-         }
      }
      &__info{
          display: flex;
@@ -182,16 +183,6 @@ body{
     }
 }
 
-
-
- .footer{
-     width: 100%;
-     height: 100px;
-     margin-top: 50px;
-     color: #fff;
-     background-color: #111;
-     text-align: center;
- }
 
 
 
@@ -271,6 +262,41 @@ body{
     }
  }
 
+.favorites{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     width: 100vw;
+     position: relative;
+     color: #fff;
+    &-item__wrapper{
+        position: relative;
+        
+        
+        background-color: #fff;
+    }
+    &__container{
+        max-width: 128px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    &-item{
+        position: relative;
+       
+    }
+    &__svg{
+        fill: #111;
+        transition: ease-in 0.3s all;
+    }
+    &:hover .favorites__svg{
+        fill: red;
+    }
+}
+
+
+
 .active{
     transition: all ease 0.5s;
     height: 100vh;
@@ -282,7 +308,14 @@ body{
 
 
 
-
+.footer{
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+    color: #fff;
+    background-color: #111;
+    text-align: center;
+}
 
 
 
@@ -360,3 +393,4 @@ body{
       transform: rotate(360deg);
     }
   }
+

@@ -3,7 +3,7 @@
       <h1 class="title">Catalog</h1>
       <Loader v-if="loading"/>
       <div class="catalog__container">
-        <Product-card
+        <product-card
           v-for="product in PRODUCTS"
           :key="product.arcticle"
           :productData="product"
