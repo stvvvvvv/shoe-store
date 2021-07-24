@@ -263,29 +263,36 @@ body{
  }
 
 .favorites{
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     width: 100vw;
-     position: relative;
-     color: #fff;
-    &-item__wrapper{
-        position: relative;
-        
-        
-        background-color: #fff;
-    }
-    &__container{
-        max-width: 128px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    z-index: 1000000000;
+    &-item{
+        color: #fff;
         display: flex;
         justify-content: center;
         align-items: center;
-        cursor: pointer;
+        &__wrapper{
+            position: absolute;
+            width: 100vw;
+            height: 0vh;
+            top: 82px;
+            left: 0;
+            background-color: #111;
+            overflow: scroll;
+            overflow-x: hidden;
+            box-shadow: 0px 9px 30px 0px rgba(17, 17, 17, 50%);
+            transition: all ease 1s;
+        }
     }
-    &-item{
-        position: relative;
-       
+    &__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
     }
+    
     &__svg{
         fill: #111;
         transition: ease-in 0.3s all;
@@ -293,6 +300,11 @@ body{
     &:hover .favorites__svg{
         fill: red;
     }
+}
+
+.activeFav{
+    transition: all ease 0.5s;
+    height: 100vh;
 }
 
 

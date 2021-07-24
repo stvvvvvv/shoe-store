@@ -68,17 +68,17 @@ import CartItem from './CartItem.vue'
 
 export default {
   name: 'Cart',
-  data () {
-    return {
-      showCartItems: false
-    }
-  },
   props: {
     cartData: {
       type: Array,
       default () {
         return []
       }
+    }
+  },
+  data () {
+    return {
+      showCartItems: false
     }
   },
   components: {
