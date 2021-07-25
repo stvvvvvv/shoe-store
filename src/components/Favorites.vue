@@ -10,7 +10,6 @@
         </svg>
         </div>
         <div class="favorites-item__wrapper" :class="{ activeFav: showFavoritiesItems }">
-          <h2 v-if="showCartItems == false">Hi</h2>
           <favorites-item/>
         </div>
     </div>
