@@ -4,8 +4,7 @@ import axios from 'axios'
 export default createStore({
   state: {
     products: [],
-    cart: [],
-    stateCartItems: Boolean
+    cart: []
   },
   mutations: {
     SET_PRODUCTS_TO_STATE: (state, products) => {
